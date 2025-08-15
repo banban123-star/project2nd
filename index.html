@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Bankin Page</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            color: #f4f4f4;
+            transition: background 0.5s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 700px;
+            text-align: center;
+            background-color: rgba(26, 26, 26, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        #main-title {
+            font-size: 2.5em;
+            margin-top: 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #d6d6d6;
+        }
+
+        .intro {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #bbb;
+            text-align: center; 
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            display: block;
+            margin: 10px auto;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #e2e2e2;
+            font-size: 1.5em;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .change-btn {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .change-btn:hover {
+            background-color: #4b00b5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="main-title">I'm Back!</h1>
+        <p class="intro">Hi! My name is Ivan Bankin.</p>
+
+        <img src="12345.jpeg" alt="Ivan Bankin" class="profile-pic">
+
+        <h2>Class Expectations</h2>
+        <p>I expect the class to continue with certain and uncertain things.</p>
+
+        <h2>Subject Expectations</h2>
+        <p>I expect the subject to go on a new level that could be harder than the previous subject.</p>
+
+        <h2>Future PHP Projects</h2>
+        <p>My future PHP project would be a recommendation system.</p>
+
+        <button class="change-btn" id="changeBgBtn">Change Background</button>
+    </div>
+
+    <script>
+        const images = [
+            "atomic.gif", // first background
+            "ok.gif",
+            "kag.gif"
+        ];
+
+        let imgIndex = 0;
+
+        // Set the first background when page loads
+        document.body.style.backgroundImage = `url('${images[imgIndex]}')`;
+
+        // Change background on button click
+        document.getElementById("changeBgBtn").addEventListener("click", function() {
+            imgIndex = (imgIndex + 1) % images.length;
+            document.body.style.backgroundImage = `url('${images[imgIndex]}')`;
+        });
+    </script>
+
+</body>
+</html>
